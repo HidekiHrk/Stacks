@@ -5,3 +5,8 @@ Como usar:
 ```sh
 python main.py [q1]
 ```
+
+### Observações para a Questão 1:
+```sh
+python main.py q1 nome_do_arquivo(opcional)
+```
