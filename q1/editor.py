@@ -3,6 +3,8 @@ from stack import Stack
 class Editor(Stack):
     def __init__(self, string:str = ""):
         super().__init__()
+        if string:
+            self.read(string)
 
     def read(self, string:str):
         for char in string:
@@ -25,3 +27,8 @@ class Editor(Stack):
     def removeLines(self, number):
         for x in range(number):
             self.remove('\n')
+
+    def save(self, filename:str):
+        with open(filename, 'w', encoding='utf-8') as fp:
+            fp.write(self.text)
+        return True
